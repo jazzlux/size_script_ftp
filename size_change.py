@@ -2,6 +2,11 @@ from PIL import Image
 import glob, os
 from ftplib import FTP
 
+"""
+A simple script to resize photos from working folder and uploading them via FTP
+checking if pics already exist on server.
+I want to add EXIF tags mod and modyfing my website with auto upload
+"""
 
 def file_sizing():
     size = 600, 600
