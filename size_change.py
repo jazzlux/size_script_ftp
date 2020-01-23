@@ -4,7 +4,7 @@ from ftplib import FTP
 
 """
 A simple script to resize photos from working folder and uploading them via FTP
-checking if pics already exist on server.
+checking if pics already exist on the server.
 I want to add EXIF tags mod and modyfing my website with auto upload
 """
 
@@ -42,10 +42,10 @@ def ftp_conn():
         file = open(pictures,'rb')       # file to send
 
         if file_name in srv_files:
-            print('all up to date..')
+            print('up to date..')
             pass
         else:
-            print('uploading...')
+            print('uploading...%s' %(file_name))
             ftp.storbinary("STOR " + file_name, file)   # send the file
 
     #ftp.dir()
